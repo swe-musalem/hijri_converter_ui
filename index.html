@@ -1,24 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
-  <body>
-    <label for="start">Gregorian date:</label>
+  <body class="relative bg-[#00A868] text-white">
+    <div class="h-screen w-full">
+      <div class="absolute top-1/4 h-1/2  sm:w-1/4 sm:left-1/3 flex flex-col w-3/4 left-10 items-center border-2 border-[#E6E5E5] rounded  justify-evenly ">
+        <div class="flex flex-col justify-center items-center ">
+          <label for="start" class="mb-1">التاريخ الميلادي:</label>
 
-    <input type="text" id="start" name="trip-start" />
-    <button class="btn">convert</button>
-    <p>Hijri Date:</p>
-    <p id="end">no picked date</p>
+          <input placeholder="مثال:1-4-2022" class="bg-white rounded w-full text-[#00A868] placeholder-black p-1" type="text" id="start" name="trip-start" />
+          <button class="btn bg-sky-500 rounded w-1/2 mt-2  p-1 ">تحويل</button>
+          <p>التاريخ بالهجري: <span id="end" class="flex justify-center flex-row-reverse"> no picked date</span> </p>
+          
 
-    <label for="start1">Hijri date:</label>
+        </div>
+        
 
-    <input type="text" id="start1" name="trip-start" />
-    <button class="btn1">convert</button>
-    <p>Gregorian Date:</p>
-    <p id="end1">no picked date</p>
+        <div class="flex flex-col justify-center items-center ">
+          <label for="start1" class="mb-1">التاريخ الهجري</label>
+
+          <input placeholder="مثال: 1-5-1443" type="text" id="start1" class="bg-white rounded w-full text-[#00A868] placeholder-black p-1" name="trip-start" />
+          <button class="btn1 bg-sky-500 rounded w-1/2 mt-2  p-1">تحويل</button>
+          <p>التاريخ بالميلادي: <span id="end1" class="flex justify-center flex-row-reverse">no picked date</span></p>
+          
+
+        </div>
+        
+
+      </div>
+    </div>
+
+  
+
+
+
 
     <script>
       const ummalqura = {
